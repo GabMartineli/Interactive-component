@@ -46,7 +46,7 @@ p{
     line-height: 27px;
 }
 
-button{
+#enviar{
     border: none;
     border-radius: 30px;
     background-color: hsl(25, 97%, 53%);
@@ -84,7 +84,7 @@ button{
     transition: background-color 0.3s ease; 
 }
 
-button:hover{
+#enviar:hover{
     background-color: hsl(0, 0%, 100%);
     
 }

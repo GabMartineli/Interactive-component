@@ -1,7 +1,6 @@
 const botao = document.getElementById("enviar");
 const numeros = document.querySelectorAll(".num");
-let lastnumber = null
-
+const valortext = document.getElementById("valor")
 
 function pagina2(){
    window.location.href = "./html/pagethankyou.html";
@@ -9,14 +8,17 @@ function pagina2(){
 
 numeros.forEach(numero => {
     numero.addEventListener("click", () => {
-        numero.classList.toggle("clicado");
-        lastnumber.classList.remove("clicado")
+        numeros.forEach(num => num.classList.remove('clicado'));
+        numero.classList.add('clicado');
+
+        const valortg = numero.getAttribute("data-value");
+        valortext.textContent = valortg;
     });
 });
 
-
 botao.addEventListener("click", () => {
     pagina2()
+    
     
 })
 
